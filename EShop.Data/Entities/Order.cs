@@ -7,7 +7,7 @@ namespace EShop.Data.Entities
 {
     public class Order
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public DateTime OrderDate { set; get; }
         public Guid UserId { set; get; }
         public string ShipName { set; get; }
@@ -16,7 +16,8 @@ namespace EShop.Data.Entities
         public string ShipPhoneNumber { set; get; }
         public OrderStatus Status { set; get; }
 
-        public List<OrderDetail> OrderDetail { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
+        public AppUser AppUser { get; set; }
 
     }
 }
